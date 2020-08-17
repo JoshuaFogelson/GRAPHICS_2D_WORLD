@@ -13,3 +13,5 @@ Then, explore the contents of the project, and modify `demo.js` by adding at lea
 You may find it informative to read through `transform/transform2.js`, `transform/vector2.js`, and `drawables/drawable.js`. You do not need to edit these files, but you will need to use methods defined in them.
 
 You may also find it informative to read through the provided shaders, which have been commented heavily. We will spend some time in future labs learning our way around GLSL and writing some more interesting shaders, and a little familiarity will help!
+
+Note that the tedious setup process for shader creation has been moved to a function called `createShader` in `utils/shaderUtils.js`, but the process being used is the same as in the first lab.
