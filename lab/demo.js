@@ -222,10 +222,10 @@ var RunDemo = function(filemap)
 var InitDemo = function()
 {
 	var imports = [
-		["uniformColorVertShaderText", "shaders/uniformColor.vert.glsl", "text"],
-		["uniformColorFragShaderText", "shaders/uniformColor.frag.glsl", "text"],
-		["multiColorVertShaderText", "shaders/multiColor.vert.glsl", "text"],
-		["multiColorFragShaderText", "shaders/multiColor.frag.glsl", "text"],
+		["uniformColorVertShaderText", "shaders/uniformColor.vert.glsl"],
+		["uniformColorFragShaderText", "shaders/uniformColor.frag.glsl"],
+		["multiColorVertShaderText", "shaders/multiColor.vert.glsl"],
+		["multiColorFragShaderText", "shaders/multiColor.frag.glsl"],
 	];
 	var importer = new resourceImporter(imports, RunDemo);
 }
