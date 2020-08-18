@@ -9,17 +9,16 @@ class Drawable extends Transform2
 
 		this.mWorldUniformLocation = this.gl.getUniformLocation(this.program, 'mWorld');
 
-		this.positionArray = positionArray;
 		this.positionBuffer = this.gl.createBuffer();
 		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, this.positionBuffer);
-		this.gl.bufferData(this.gl.ARRAY_BUFFER, this.positionArray, this.gl.STATIC_DRAW);
+		this.gl.bufferData(this.gl.ARRAY_BUFFER, positionArray, this.gl.STATIC_DRAW);
 		this.positionAttribLocation = this.gl.getAttribLocation(this.program, "vertPosition");
 		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, null);
 
-		this.indexArray = indexArray;
+		this.indexLength = indexArray.length;
 		this.indexBuffer = this.gl.createBuffer();
 		this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER, this.indexBuffer);
-		this.gl.bufferData(this.gl.ELEMENT_ARRAY_BUFFER, this.indexArray, this.gl.STATIC_DRAW);
+		this.gl.bufferData(this.gl.ELEMENT_ARRAY_BUFFER, indexArray, this.gl.STATIC_DRAW);
 		this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER, null);
 	}
 
@@ -51,7 +50,7 @@ class Drawable extends Transform2
 
 		this.gl.drawElements(
 			this.gl.TRIANGLES,
-			this.indexArray.length,
+			this.indexLength,
 			this.gl.UNSIGNED_SHORT,
 			0
 		);
@@ -90,10 +89,9 @@ class MultiColorDrawable extends Drawable
 	{
 		super(gl, program, positionArray, indexArray, position, rotation, scale);
 
-		this.colorArray = colorArray;
 		this.colorBuffer = this.gl.createBuffer();
 		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, this.colorBuffer);
-		this.gl.bufferData(this.gl.ARRAY_BUFFER, this.colorArray, gl.STATIC_DRAW);
+		this.gl.bufferData(this.gl.ARRAY_BUFFER, colorArray, gl.STATIC_DRAW);
 		this.colorAttribLocation = this.gl.getAttribLocation(this.program, "vertColor");
 		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, null);
 	}
