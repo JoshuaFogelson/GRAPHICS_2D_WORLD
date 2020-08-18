@@ -12,7 +12,7 @@ class Drawable extends Transform2
 		this.positionArray = positionArray;
 		this.positionBuffer = this.gl.createBuffer();
 		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, this.positionBuffer);
-		this.gl.bufferData(this.gl.ARRAY_BUFFER, this.positionArray, gl.STATIC_DRAW);
+		this.gl.bufferData(this.gl.ARRAY_BUFFER, this.positionArray, this.gl.STATIC_DRAW);
 		this.positionAttribLocation = this.gl.getAttribLocation(this.program, "vertPosition");
 		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, null);
 
