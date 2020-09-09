@@ -4,7 +4,7 @@ This should be a quick, fun lab. Download the [lab](./lab) folder contents, and 
 
 When you've gotten them right, there should be a simple display with several moving and rotating shapes visible.
 
-Then, explore the contents of the project, and modify `demo.js` by adding at least object to the scene. Your object(s) should:
+Then, explore the contents of the project, and modify `demo.js` by adding at least one object to the scene. Your object(s) should:
 
 * always be moving, or intermittently moving; it should never stay still indefinitely.
 * always be visible, or only intermittently invisible; it should never leave view or become otherwise not visible indefinitely.
